@@ -42,6 +42,7 @@ header a.button{
 }
 header div.select{
     display:inline-block;
+    padding:3px;
 }
 header div.select svg{
     height: 20px;
@@ -51,12 +52,17 @@ header div.select svg{
     margin-top: 5px;
 
 }
+
 header select{
     background-color: transparent;
     color: white;
-    padding: 6px 0 6px 17px;
-   
+    padding:8px 0 6px 17px;
+    margin-right: 20px;
     border-radius: 3px;
+}
+header select *{
+    background-color: transparent;
+    color: black;
 }
 
 div.splash div.gradient{
@@ -119,7 +125,8 @@ div.splash input{
     padding: 15px 10px; 
     font-size: 1.2rem;
     width: 100%;
-    
+    border:none;
+    border-radius: 3px;
 }
 div.splash input ~ span{
     position: absolute;
@@ -141,7 +148,7 @@ div.splash input:focus ~span{
 
 div.splash button{
     font-size:1.625rem;
-    padding:13px 26px;
+    padding:11px 26px;
     background-color: #e50914;
     border-radius: 3px;
     color:white;
