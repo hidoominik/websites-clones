@@ -1,0 +1,149 @@
+/*Set default browser padding and margin to 0*/
+*{
+    padding: 0;
+    margin: 0;
+    /* thanks to box-sizing width 100% includes the padding */
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Helvetica Neue',  Helvetica, Arial, sans-serif;
+    background-color: black;
+    color:white;
+}
+header{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 56px;
+    width: 100%;
+    /* z index is for layers, which should show at the top etc (the bigger the higher) */
+    z-index: 5;
+}
+header a.logo{
+    display: block;
+}
+header .logo svg{
+    fill: #e50914;
+    height: 37px;
+}
+/* Second div to the right (the one with dropdown and sign in button) */
+header div+div{  
+    text-align: right;
+}
+
+header a.button{
+    display: inline-block;
+    background-color: #e50914;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 7px 17px;
+    border-radius: 3px;
+
+}
+header div.select{
+    display:inline-block;
+}
+header div.select svg{
+    height: 20px;
+    fill: white;
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 5px;
+
+}
+header select{
+    background-color: transparent;
+    color: white;
+    padding: 6px 0 6px 17px;
+   
+    border-radius: 3px;
+}
+
+div.splash div.gradient{
+    background-image: linear-gradient(0deg,transparent 50%,rgba(0,0,0,.7)),radial-gradient(50% 100%,transparent 0,rgba(0,0,0,.7) 100%);
+    position:absolute;
+    inset: 0;
+}
+div.splash{
+    position: relative;
+}
+div.splash div.background img{
+    max-width: 100%;
+    opacity: 0.6;
+
+}
+
+div.splash div.content{
+    max-width: 655px;
+    position:absolute;
+    inset:0;
+    left:50%;
+    margin-left: -327px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+div.splash h1, div.splash h3, div.splash h5{
+    font-weight: normal;
+}
+div.splash h1{
+    font-weight: bold;
+    font-size: 3.125rem;
+
+}
+div.splash h3{
+    font-size: 1.625rem;
+    margin-top: 13px;
+    margin-bottom: 30px;
+
+}
+div.splash h5{
+    font-size: 1.2rem;
+    /* top sites bottom */
+    padding: 0 47.5px 20px;
+    
+    
+
+}
+
+div.splash form{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-top: 20px;
+}
+
+
+div.splash input{
+    
+    padding: 15px 10px; 
+    font-size: 1.2rem;
+    width: 100%;
+    
+}
+div.splash input ~ span{
+    position: absolute;
+    left: 10px;
+    top:19px;
+    color:darkgray;
+    z-index: 3;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+div.splash input:focus{
+    padding-top: 19px;
+    padding-bottom: 11px;
+}
+div.splash input:focus ~span{
+    top:2px;
+    font-size: 0.7rem;
+}
+
+div.splash button{
+    font-size:1.625rem;
+    padding:13px 26px;
+    background-color: #e50914;
+    border-radius: 3px;
+    color:white;
+    border:0px;
+}
